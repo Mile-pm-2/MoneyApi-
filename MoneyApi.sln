@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyApi", "MoneyApi\MoneyApi.csproj", "{CEEA14A5-2141-4C0E-952F-447DCFE19BEE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEEA14A5-2141-4C0E-952F-447DCFE19BEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEEA14A5-2141-4C0E-952F-447DCFE19BEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEEA14A5-2141-4C0E-952F-447DCFE19BEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEEA14A5-2141-4C0E-952F-447DCFE19BEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7967A7D5-45BB-4D64-A0D6-56A262673F28}
+	EndGlobalSection
+EndGlobal
