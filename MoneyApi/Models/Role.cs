@@ -4,5 +4,5 @@
 public class Role
 {
     [Column("id")] public int Id { get; set; }
-    [Column("Hasвание роли")] public string Name { get; set; }
+    [Column("Название роли")] public string Name { get; set; }
 }
