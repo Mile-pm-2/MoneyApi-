@@ -1,9 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-[Table("actualprofitioss")]
+[Table("actualprofitloss")]
 public class ActualProfitLoss
 {
-    [Column("id")] public int Id { get; set; }
+    [Column("id")]
+    public int Id { get; set; }
 
     [Column("дата операции")]
     public DateTime OperationDate { get; set; }
@@ -18,9 +19,8 @@ public class ActualProfitLoss
     public int ProfitLossItemId { get; set; }
 
     [ForeignKey("CostCenterId")]
-    public CostCenter CostCenter { get; set; }
+    public CostCenter? CostCenter { get; set; }  // ← добавь ?
 
     [ForeignKey("ProfitLossItemId")]
-    public ProfitLossItem ProfitLossItem { get; set; }
+    public ProfitLossItem? ProfitLossItem { get; set; }  // ← добавь ?
 }
-

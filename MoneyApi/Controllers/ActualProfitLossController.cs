@@ -44,6 +44,9 @@ public class ActualProfitLossController : ControllerBase
         if (!await _context.ProfitLossItems.AnyAsync(p => p.Id == item.ProfitLossItemId))
             return BadRequest("Invalid ProfitLossItemId");
 
+        // Конвертируем DateTime в UTC
+        item.OperationDate = DateTime.SpecifyKind(item.OperationDate, DateTimeKind.Utc);
+
         _context.ActualProfitLosses.Add(item);
         await _context.SaveChangesAsync();
         return CreatedAtAction(nameof(GetActualProfitLoss), new { id = item.Id }, item);
@@ -60,6 +63,9 @@ public class ActualProfitLossController : ControllerBase
 
         if (!await _context.ProfitLossItems.AnyAsync(p => p.Id == item.ProfitLossItemId))
             return BadRequest("Invalid ProfitLossItemId");
+
+        // Конвертируем DateTime в UTC (добавь эту строку!)
+        item.OperationDate = DateTime.SpecifyKind(item.OperationDate, DateTimeKind.Utc);
 
         _context.Entry(item).State = EntityState.Modified;
         await _context.SaveChangesAsync();

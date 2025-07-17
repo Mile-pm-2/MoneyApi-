@@ -39,6 +39,10 @@ public class UsersController : ControllerBase
         if (!await _context.Roles.AnyAsync(r => r.Id == user.RoleId))
             return BadRequest("Invalid RoleId");
 
+        ModelState.Remove("Role"); // <--- Добавь эту строку
+
+        user.Role = null;
+
         _context.Users.Add(user);
         await _context.SaveChangesAsync();
         return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
